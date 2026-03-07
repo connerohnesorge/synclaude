@@ -1,0 +1,25 @@
+[package]
+name = "synclaude"
+version = "0.1.0"
+edition = "2024"
+description = "Synchronize ~/.claude/ directories across NixOS machines via git"
+
+[dependencies]
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# File watching
+notify = "7"
+
+# Config
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+dirs = "6"
+
+# Error handling
+anyhow = "1"
+thiserror = "2"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
