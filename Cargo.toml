@@ -16,6 +16,15 @@ serde = { version = "1", features = ["derive"] }
 toml = "0.8"
 dirs = "6"
 
+# Git (native)
+gix = { version = "0.80", features = [
+    "blocking-network-client",
+    "blocking-http-transport-curl",
+    "merge",
+    "tree-editor",
+    "revision",
+] }
+
 # Error handling
 anyhow = "1"
 thiserror = "2"
